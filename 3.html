@@ -1,0 +1,5 @@
+根据error，我使用的代理协议是socket5，而curl的https使用的是socket4，只要添加命令行参数，设置curl的代理为socket5即可解决该错误</br>
+以curl安装docker为例:</br>
+在命令中加上-x参数指定代理地址和协议:<code>curl -x socks5://127.0.0.1:7891 -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</code></br>
+又例对git指定代理:</br>
+<code>git config --global http.proxy 'socks5://127.0.0.1:7891'</code>
